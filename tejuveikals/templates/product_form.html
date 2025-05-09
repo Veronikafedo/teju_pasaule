@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pievienot tēju</title>
+</head>
+
+
+<!-- CREATE/INSERT -->
+
+
+<body>
+    <h1>Pievienot jaunu tēju</h1>
+    <form method="post">
+        <label>Nosaukums:</label><br>
+        <input type="text" name="nosaukums" required><br><br>
+
+        <label>Cena:</label><br>
+        <input type="number" step="0.01" name="cena" required><br><br>
+
+        <label>Sastāvs:</label><br>
+        <textarea name="sastavs" required></textarea><br><br>
+
+        <label>Foto URL:</label><br>
+        <input type="text" name="foto"><br><br>
+
+        <label>Veikala ID (1-Maxima, 2-Rimi, 3-Mego):</label><br>
+        <input type="number" name="veikala_id" required><br><br>
+
+        <!-- ------- -->
+        <label>Iepakojuma ID(1-Papīra kārbiņa, tējpaciņas; 2-Papīra kārbiņa, bēramā; 3-Metāla kaste, bēramā; 4-Papīra kārbiņa, tējpaciņas folijā):</label><br>
+        <input type="number" name="iepakojuma_id" required><br><br>
+
+        <label>Razotaja ID (1-Basilur, 2-Herbitum, 3-Greenfield, 4-Možums, 5-Lipton):</label><br>
+        <input type="number" name="razotaja_id" required><br><br>
+        <!-- ---- -->
+
+
+        <button type="submit">Saglabāt</button>
+    </form>
+    <p><a href="{{ url_for('products') }}">Atpakaļ uz produktiem</a></p>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{product.name}} - Tea world{% endblock %}
+{% block content %}
+
+
+<div class="products-show">
+    <img src="{{ url_for('static', filename='images/products/' ~ product['foto']) }}" alt="{{ product['nosaukums'] }}">
+    <div>
+        <h2>{{product["nosaukums"]}}</h2>
+        <p><strong>Cena:</strong> {{product["cena"]}} €</p>
+        <p><strong>Sastāvdaļas:</strong> {{product["sastavs"]}}</p>
+        <p><strong>Šo tēju vari iegādāties šajā veikalā:</strong> {{product["vnosaukums"]}}</p>
+        <p><strong>Masa:</strong> {{product["masa"]}} g</p>
+        <p><strong>Iepakojuma veids:</strong> {{product["veids"]}}</p>
+        <p><strong>Tējas ražotājs:</strong> {{product["name"]}}</p>
+    </div>
+    <a href="{{ url_for('update_product', id=product.id) }}"><button class="edit-button">Rediģēt</button></a>
+</div>
+
+{% endblock %}

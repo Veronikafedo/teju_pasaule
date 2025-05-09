@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2eff0;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+}
+
+ul li:hover {
+    background-color: #e0e0e0;
+}
+
+/* products-list */
+.products-list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products-item {
+    max-width: 320px;
+    background-color: #82a8b3;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.products-item:hover {
+    background-color: #4a876582;
+}
+
+.products-item .product-price {
+    text-align: right;
+    font-size: 23px;
+}
+
+.products-item img {
+    max-width: 100%;
+}
+
+/* products-show */
+.products-show {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.products-show h2 {
+    /*nosaukums, kad ieej*/
+    font-size: 36px;
+}
+
+.products-show p {
+    /*aprsksts par tēju, kad ieej*/
+    font-size: 25px;
+    background-color: #DDD;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.products-show img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* poga PIEVIENOT */
+.add-product-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.add-product-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-product-button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+/* poga DELETE */
+.delete-button {
+    background-color: #e53935;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+
+
+
+/* poga REDIĢĒT */
+.edit-button {
+    background-color: #fbed2d; /* dzeltena */
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    /* display: inline-block; */
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.edit-button:hover {
+    background-color: #fbed2d;
+}

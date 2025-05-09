@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Produkti{% endblock %}
+{% block content %}
+
+
+<div class="add-product-wrapper">
+    <a href="{{ url_for('create_product') }}">
+      <button class="add-product-button">Pievienot jaunu produktu</button>
+    </a>
+</div>
+
+
+
+<h2>Produkti</h2>
+
+
+<div class="products-list">
+    {% for product in products %}
+    <a class="products-item" href="{{ url_for('products_show', product_id=product['id']) }}">
+        <img src="{{ url_for('static', filename='images/products/' ~ product['foto']) }}"
+            alt="{{ product['nosaukums'] }}">
+        <div class="product-name">{{ product["nosaukums"] }}</div>
+        <div class="product-price">{{ product["cena"] }} € </div>
+
+
+
+        <form method="post" action="{{ url_for('delete_product', id=product['id']) }}"
+        onsubmit="return confirm('Vai tiešām dzēst šo tēju?');">
+        <button type="submit" class="delete-button">Dzēst</button>
+    </form>
+    </a>
+    {% endfor %}
+</div>
+
+
+
+
+<!-- PIEVIENOT PRODUKTU -->
+<!-- </ul>
+<a href="{{ url_for('create_product') }}">
+    <button>Pievienot jaunu produktu</button>
+</a> -->
+
+
+
+<!-- LABOT PRODUKTU -->
+
+
+<!-- {% for product in products %}
+  <div>
+    <p>{{ product.nosaukums }} – {{ product.cena }} €</p>
+    <a href="{{ url_for('update_product', id=product.id) }}">Rediģēt</a>
+  </div>
+{% endfor %} -->
+
+
+
+
+
+
+
+
+
+<!-- <h1>Produkti</h1>
+<a href="{{ url_for('create_product') }}">Pievienot jaunu produktu</a>
+<ul>
+  {% for product in products %}
+    <li>
+      {{ product['nosaukums'] }} - {{ product['cena'] }} €
+      <a href="{{ url_for('update_product', id=product['id']) }}">Rediģēt</a>
+      <form method="post" action="{{ url_for('delete_product', id=product['id']) }}" style="display:inline;">
+        <button type="submit">Dzēst</button>
+      </form>
+    </li>
+  {% endfor %} -->
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

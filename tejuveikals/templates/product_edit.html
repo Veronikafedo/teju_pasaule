@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rediģēt tēju</title>
+</head>
+
+<body>
+    <!-- <h1>Rediģēt tēju</h1> -->
+    <form method="post">
+        <label>Nosaukums: <input type="text" name="nosaukums" value="{{ product.nosaukums }}"></label><br>
+        <label>Cena: <input type="number" step="0.01" name="cena" value="{{ product.cena }}"></label><br>
+        <label>Sastāvs: <textarea name="sastavs">{{ product.sastavs }}</textarea></label><br>
+        <label>Foto URL: <input type="text" name="foto" value="{{ product.foto }}"></label><br>
+        <label>Veikala ID (1-Maxima, 2-Rimi, 3-Mego): <input type="number" name="veikala_id" value="{{ product.veikala_id }}"></label><br>
+        <label>Iepakojuma ID (1-Papīra kārbiņa, tējpaciņas; 2-Papīra kārbiņa, bēramā; 3-Metāla kaste, bēramā; 4-Papīra kārbiņa, tējpaciņas folijā): <input type="number" name="iepakojuma_id" value="{{ product.iepakojuma_id }}"></label><br>
+        <label>Ražotāja ID (1-Basilur, 2-Herbitum, 3-Greenfield, 4-Možums, 5-Lipton): <input type="number" name="razotaja_id" value="{{ product.razotaja_id }}"></label><br>
+
+        <button type="submit">Saglabāt</button>
+    </form>
+
+
+    
+    <p><a href="{{ url_for('products') }}">Atpakaļ uz produktiem</a></p>
+</body>
+
+</html>
